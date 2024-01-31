@@ -1,0 +1,64 @@
+---
+title: Learn Web Development
+searchable: false
+---
+
+import Features from "@components/features";
+import { Callout, Tabs } from "nextra/components";
+
+{/* wrapped with {} to mark it as javascript so mdx will not put it under a p tag */}
+{<h1 className="text-center font-extrabold md:text-5xl my-8">እንኳን ወደ ዌብ ደቨሎፕመንት መጡ</h1>}
+
+{<p className="my-8">Dive into the world of coding, design, and functionality. Learn HTML, CSS, and JavaScript to craft stunning websites. Explore front-end and back-end development, frameworks, and libraries. Join a community of innovators and unleash your creativity in the dynamic realm of web development!</p>}
+
+import styles from "../components/YouTubeEmbed/youtube-embed.module.css";
+
+export const YoutubeEmbed = () => (
+  <div className={styles.videoresponsive}>
+    <iframe
+      width="853"
+      height="480"
+      src="https://www.youtube.com/embed/BdOtR2A5agc"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="Embedded youtube"
+    />
+  </div>
+);
+
+import { Accordion, AccordionItem } from "@nextui-org/react";
+
+{" "}
+
+<Accordion className="my-4" itemStyles="outline-none" variant="splitted">
+  <AccordionItem
+    key="1"
+    className="focus:outline-none"
+    aria-label="Accordion 1"
+    title="Month 1"
+  >
+    <ul>
+      <li className="my-2">Introduction to Web Development</li>
+      <li className="my-2">Understanding HTML</li>
+      <li className="my-2">Understanding CSS</li>
+      <li className="my-2">Understanding JavaScript</li>
+    </ul>
+  </AccordionItem>
+  <AccordionItem key="2" aria-label="Accordion 2" title="Month 2">
+    <ul>
+      <li className="my-2">Intermediate JavaScript</li>
+      <li className="my-2">Introduction to JQuery</li>
+      <li className="my-2">Introduction to React</li>
+      <li className="my-2">Intermediate React</li>
+    </ul>
+  </AccordionItem>
+  <AccordionItem key="3" aria-label="Accordion 3" title="Month 3">
+   <ul>
+      <li className="my-2">Server Side JavaScript</li>
+      <li className="my-2">Introduction to Databases</li>
+      <li className="my-2">Integration of Frontend and Backend</li>
+      <li className="my-2">Deployment</li>
+    </ul>
+  </AccordionItem>
+</Accordion>

@@ -1,0 +1,44 @@
+{
+  "index": {
+    "title": "Introduction",
+    "type": "page",
+    "display": "hidden"
+  },
+  "month-one": {
+    "type": "menu",
+    "title": "Month 1",
+    "items": {
+      "introduction-to-web": {
+        "title": "Introduction to Web Development",
+        "href":"/introduction-to-web/hello"
+      },
+      "understanding-html": {
+        "title": "Understanding HTML",
+        "href":"/understanding-html/introduction"
+      }
+    }
+  },
+  "introduction-to-web": {
+    "title": "Introduction to Web",
+    "type": "page",
+    "display": "hidden"
+  },
+  "understanding-html": {
+    "title": "Understanding HTML",
+    "display": "hidden"
+  },
+  "404": {
+    "type": "page",
+    "theme": {
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  },
+  "500": {
+    "type": "page",
+    "theme": {
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  }
+}
