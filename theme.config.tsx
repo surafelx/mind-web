@@ -60,7 +60,7 @@ const FOOTER_LINK_TEXT = {
 const config: DocsThemeConfig = {
   banner: {
     key: "swr-2",
-    text: "SWR 2.0 is out! Read more →",
+    text: "Welcome to the 3 Month Web Development Course →",
   },
   darkMode: true,
   docsRepositoryBase:
