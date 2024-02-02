@@ -15,6 +15,58 @@
       "understanding-html": {
         "title": "Understanding HTML",
         "href":"/understanding-html/introduction"
+      },
+      "understanding-css": {
+        "title": "Understanding CSS",
+        "href":"/understanding-css/introduction"
+      },
+      "understanding-javascript": {
+        "title": "Understanding Javascript",
+        "href":"/understanding-javascript/introduction"
+      }
+    }
+  },
+  "month-two": {
+    "type": "menu",
+    "title": "Month 2",
+    "items": {
+      "intermediate-javascript": {
+        "title": "Intermediate JavaScript",
+        "href":"/intermediate-javascript/introduction"
+      },
+      "introduction-to-react": {
+        "title": "Introduction to React",
+        "href":"/introduction-to-react/introduction"
+      },
+      "react-state-and-routing": {
+        "title": "React State and Routing",
+        "href":"/react-state-and-routing/introduction"
+      },
+      "understanding-javascript": {
+        "title": "Understanding Javascript",
+        "href":"/understanding-javascript/introduction"
+      }
+    }
+  },
+  "month-three": {
+    "type": "menu",
+    "title": "Month 3",
+    "items": {
+      "server-side-javascript": {
+        "title": "Server-Side JavaScript",
+        "href":"/server-side-javascript/introduction"
+      },
+      "databases-and-mongodb": {
+        "title": "Databases and MongoDB",
+        "href":"/databases-and-mongodb/introduction"
+      },
+      "restful-api-development": {
+        "title": "RESTful API Development",
+        "href":"/restful-api-development/introduction"
+      },
+      "server-deployment": {
+        "title": "Server Deployment",
+        "href":"/server-deployment/introduction"
       }
     }
   },
@@ -25,8 +77,55 @@
   },
   "understanding-html": {
     "title": "Understanding HTML",
+    "type": "page",
     "display": "hidden"
   },
+  "understanding-css": {
+    "title": "Understanding CSS",
+    "type": "page",
+    "display": "hidden"
+  },
+  "understanding-javascript": {
+    "title": "Understanding CSS",
+    "type": "page",
+    "display": "hidden"
+  },
+  "intermediate-javascript": {
+    "title": "Intermediate JavaScript",
+    "type": "page",
+    "display": "hidden"
+  },
+  "introduction-to-react": {
+    "title":  "Introduction to React",
+    "type": "page",
+    "display": "hidden"
+  },
+  "react-state-and-routing": {
+    "title": "React State and Routing",
+    "type": "page",
+    "display": "hidden"
+  },
+  "server-side-javascript": {
+    "title": "Server-Side JavaScript",
+    "type": "page",
+    "display": "hidden"
+  },
+  "databases-and-mongodb": {
+    "title": "Databases and MongoDB",
+    "type": "page",
+    "display": "hidden"
+  },
+  "restful-api-deployment": {
+    "title": "RESTful API Development",
+    "type": "page",
+    "display": "hidden"
+  },
+  "server-deployment": {
+    "title": "Srever Deployment",
+    "type": "page",
+    "display": "hidden"
+  },
+  
   "404": {
     "type": "page",
     "theme": {

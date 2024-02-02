@@ -1,0 +1,31 @@
+{
+  "--- hey": {
+    "title": "Basics of JavaScript",
+    "type": "separator"
+  },
+  "introduction": {},
+  "variables": {},
+  "data-types": {},
+  "operators": {},
+  "--- my_new_separator": {
+    "title": "Working with HTML",
+    "type": "separator"
+  },
+  "scripting-within": {},
+  "--- another_separator": {
+    "title": "Document Object Model (DOM)",
+    "type": "separator"
+  },
+  "dom-introduction": {},
+  "accessing-html": {},
+  "manipulating-html": {},
+  "event-handling": {},
+  "--- practical-session-one-separator": {
+    "title": "Practical Session",
+    "type": "separator"
+  },
+  "blogging-platform": {},
+  "form-submission": {},
+  "images-gallery": {},
+  "page-animations": {}
+}

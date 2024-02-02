@@ -91,8 +91,8 @@ const config: DocsThemeConfig = {
             x2="120"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#1d93d2" />
-            <stop offset="1" stop-color="#38b0e3" />
+            <stop offset="0" stopColor="#1d93d2" />
+            <stop offset="1" stopColor="#38b0e3" />
           </linearGradient>
         </defs>
         <title>Telegram_logo</title>

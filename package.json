@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@ckeditor/ckeditor5-html-embed": "^41.0.0",
+    "@next/third-parties": "^14.1.0",
     "@nextui-org/react": "^2.2.9",
     "flowbite": "^2.2.1",
     "flowbite-react": "^0.7.2",
@@ -21,7 +22,7 @@
     "intersection-observer": "^0.10.0",
     "isomorphic-git": "1.21.0",
     "markdown-to-jsx": "^6.11.4",
-    "next": "^13.5.6",
+    "next": "^14.1.0",
     "nextra": "latest",
     "nextra-theme-blog": "^2.13.2",
     "nextra-theme-docs": "latest",

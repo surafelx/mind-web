@@ -1,7 +1,8 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { SkipNavLink } from 'nextra-theme-docs'
 import {NextUIProvider} from "@nextui-org/react";
-
+import { GoogleAnalytics } from '@next/third-parties/google'
+ 
 class MyDocument extends Document {
   render() {
     return (
@@ -13,6 +14,7 @@ class MyDocument extends Document {
           <Main /> 
           <NextScript />
           </NextUIProvider>
+          <GoogleAnalytics gaId="G-G-TDPC6ZDQQ2" />
         </body>
       </Html>
     )
