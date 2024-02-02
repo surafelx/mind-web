@@ -14,8 +14,8 @@ class MyDocument extends Document {
           <Main /> 
           <NextScript />
           </NextUIProvider>
-          <GoogleAnalytics gaId="G-G-TDPC6ZDQQ2" />
         </body>
+        <GoogleAnalytics gaId="G-TDPC6ZDQQ2" />
       </Html>
     )
   }
