@@ -25,6 +25,39 @@ Defines the direction of the main axis, which determines the flow of the flex co
 - `row`: Items are placed in a horizontal line (default).
 - `column`: Items are placed in a vertical line.
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: row; /* or column */
+    }
+
+    .flex-item {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background-color: lightblue;
+    }
+  </style>
+  <title>flex-direction Example</title>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+  </div>
+
+</body>
+</html>
+
+```
 #### `justify-content`
 
 Aligns items along the main axis. This property determines how extra space is distributed. Common values include:
@@ -35,6 +68,39 @@ Aligns items along the main axis. This property determines how extra space is di
 - `space-around`: Items are evenly distributed with equal space around them.
   center: Items are centered along the main axis.
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .flex-container {
+      display: flex;
+      justify-content: space-between; /* or flex-start, flex-end, space-around, center */
+    }
+
+    .flex-item {
+      width: 100px;
+      height: 100px;
+      background-color: lightcoral;
+    }
+  </style>
+  <title>justify-content Example</title>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+  </div>
+
+</body>
+</html>
+
+
+```
 #### `align-items`
 
 Aligns items along the cross axis (perpendicular to the main axis). Common values include:
@@ -43,6 +109,40 @@ Aligns items along the cross axis (perpendicular to the main axis). Common value
 - `center`: Items are centered along the cross axis.
 - `stretch`: Items are stretched to fill the container along the cross axis.
 
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .flex-container {
+      display: flex;
+      align-items: center; /* or flex-start, flex-end, stretch */
+      height: 200px; /* Set a fixed height for demonstration */
+    }
+
+    .flex-item {
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+    }
+  </style>
+  <title>align-items Example</title>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+  </div>
+
+</body>
+</html>
+
+```
 ```css
 /* Example of Flexbox */
 .flex-container {
@@ -57,19 +157,20 @@ In this example, the `.flex-container` class creates a Flexbox container with it
 
 ### Benefits of Flexbox
 
-1. Dynamic Layouts:
+#### Dynamic Layouts
+
 Flexbox simplifies the creation of dynamic and flexible layouts that adapt to different screen sizes.
 
-2. Easy Alignment:
+#### Easy Alignment
 Aligning items both horizontally and vertically becomes intuitive with justify-content and align-items.
 
-3. Responsive Design:
+#### Responsive Design
 Ideal for building responsive designs, especially in situations where the number of items or their sizes are not fixed.
 
-4. Efficient Space Distribution
+#### Efficient Space Distribution
 The space-between and space-around values of justify-content make efficient use of available space.
 
-5. Ordering Flex Items
+#### Ordering Flex Items
 Flex items can be reordered using the order property, allowing for flexibility in visual arrangement.
 
 In conclusion, Flexbox is a valuable tool for creating responsive and adaptive layouts. Its simplicity and versatility make it an essential part of modern web development, empowering developers to build visually engaging interfaces with minimal effort.
