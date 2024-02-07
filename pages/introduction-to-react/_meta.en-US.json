@@ -1,31 +1,32 @@
 {
   "--- hey": {
-    "title": "Basics of JavaScript",
+    "title": "Understanding React Basics",
     "type": "separator"
   },
   "introduction": {},
-  "variables": {},
-  "data-types": {},
-  "operators": {},
+  "react-components": {},
+  "jsx-syntax": {},
+  "virtual-dom": {},
   "--- my_new_separator": {
-    "title": "Working with HTML",
+    "title": "Setting Up a React Environment",
     "type": "separator"
   },
-  "scripting-within": {},
+  "installation": {},
+  "creating-a-react-app": {},
+  "project-structure": {},
   "--- another_separator": {
-    "title": "Document Object Model (DOM)",
+    "title": "React Component Lifecycle",
     "type": "separator"
   },
-  "dom-introduction": {},
-  "accessing-html": {},
-  "manipulating-html": {},
-  "event-handling": {},
+  "mounting-updating-unmounting": {},
+  "lifecycle-methods": {},
+  "handling-side-effects": {},
   "--- practical-session-one-separator": {
-    "title": "Practical Session",
+    "title": "State and Props in React",
     "type": "separator"
   },
-  "blogging-platform": {},
-  "form-submission": {},
-  "images-gallery": {},
-  "page-animations": {}
+  "state": {},
+  "props": {},
+  "stateful-vs-stateless": {},
+  "best-practices": {}
 }

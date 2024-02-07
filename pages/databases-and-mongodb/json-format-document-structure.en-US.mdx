@@ -1,0 +1,117 @@
+JSON Document Structure:
+A JSON document is a collection of key-value pairs, where each key is a string and each value can be a string, number, boolean, array, object, or null. The document is enclosed in curly braces {}.
+
+Example:
+json
+Copy code
+{
+"name": "John Doe",
+"age": 30,
+"isStudent": false,
+"courses": ["Math", "History", "English"],
+"address": {
+"street": "123 Main St",
+"city": "Anytown",
+"country": "USA"
+},
+"grades": {
+"math": 95,
+"history": 87,
+"english": 92
+},
+"isActive": true,
+"awards": null
+}
+In the example above:
+
+"name", "age", "isStudent", "isActive" are string, number, boolean, and boolean values, respectively.
+"courses" is an array containing strings.
+"address" is an object with nested key-value pairs.
+"grades" is another object with key-value pairs.
+"awards" is set to null.
+JSON Formatting Conventions:
+
+1. Indentation:
+   Indent nested structures for readability.
+   Use spaces or tabs, but be consistent.
+   json
+   Copy code
+   {
+   "name": "John Doe",
+   "age": 30,
+   "address": {
+   "street": "123 Main St",
+   "city": "Anytown"
+   }
+   }
+2. Quotation Marks:
+   Keys and string values must be enclosed in double quotation marks.
+   json
+   Copy code
+   {
+   "name": "John Doe",
+   "isStudent": false
+   }
+3. Array and Object Syntax:
+   Arrays are ordered lists enclosed in square brackets [].
+   Objects are unordered sets of key-value pairs enclosed in curly braces {}.
+   json
+   Copy code
+   {
+   "courses": ["Math", "History", "English"],
+   "grades": {
+   "math": 95,
+   "history": 87,
+   "english": 92
+   }
+   }
+4. Null and Boolean Values:
+   Use null for representing the absence of a value.
+   Use true and false for boolean values.
+   json
+   Copy code
+   {
+   "awards": null,
+   "isActive": true
+   }
+   JSON Schema:
+   JSON Schema is a way to describe the structure of JSON documents. It defines the expected data types, keys, and their constraints. Here's a simple example:
+
+json
+Copy code
+{
+"$schema": "http://json-schema.org/draft-07/schema#",
+"type": "object",
+"properties": {
+"name": {
+"type": "string"
+},
+"age": {
+"type": "integer"
+},
+"isStudent": {
+"type": "boolean"
+},
+"courses": {
+"type": "array",
+"items": {
+"type": "string"
+}
+},
+"address": {
+"type": "object",
+"properties": {
+"street": {
+"type": "string"
+},
+"city": {
+"type": "string"
+}
+}
+}
+},
+"required": ["name", "age"]
+}
+This schema defines the expected structure of a JSON document, ensuring that it includes a "name" (string), "age" (integer), and other optional properties.
+
+Understanding the basic structure and formatting conventions of JSON is essential for working with various programming languages, APIs, and data exchange formats. It provides a standardized way to represent data that is both human-readable and machine-readable.

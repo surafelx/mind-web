@@ -1,31 +1,34 @@
 {
   "--- hey": {
-    "title": "Basics of JavaScript",
+    "title": "Preparing for Deployment",
     "type": "separator"
   },
-  "introduction": {},
-  "variables": {},
-  "data-types": {},
-  "operators": {},
+  "code-cleanup-and-optimization": {},
+  "environment-configuration": {},
+  "securing-sensitive-information": {},
+  "production-ready": {},
   "--- my_new_separator": {
-    "title": "Working with HTML",
+    "title": "Choosing a Hosting Provider",
     "type": "separator"
   },
-  "scripting-within": {},
+  "overview-of-cloud-hosting-services": {},
+  "deployment-options": {},
+  "serverless-deployment": {},
+  "evaluating-cost-and-scalability": {},
   "--- another_separator": {
-    "title": "Document Object Model (DOM)",
+    "title": "Containerization and Orchestration",
     "type": "separator"
   },
-  "dom-introduction": {},
-  "accessing-html": {},
-  "manipulating-html": {},
-  "event-handling": {},
-  "--- practical-session-one-separator": {
-    "title": "Practical Session",
+  "introduction-to-docker-containers": {},
+  "building-docker-images": {},
+  "orchestration-with-kubernetes": {},
+  "benefits-of-containerization": {},
+  "--- ci-cd-one-separator": {
+    "title": "Continuous Integration and Deployment",
     "type": "separator"
   },
-  "blogging-platform": {},
-  "form-submission": {},
-  "images-gallery": {},
-  "page-animations": {}
+  "setting-up-ci-cd": {},
+  "integrating-ci-cd": {},
+  "automated-testing": {},
+  "rollback-strategies": {}
 }

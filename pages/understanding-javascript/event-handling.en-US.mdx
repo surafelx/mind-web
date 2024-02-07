@@ -1,246 +1,97 @@
-# Contact Page
+# Event Handling
 
-import { Steps } from "nextra/components";
+Event handling is a crucial aspect of creating interactive and dynamic web pages. In JavaScript, events represent occurrences, such as a user clicking a button or a page finishing loading. In this article, we'll explore how to handle events using JavaScript to respond to user interactions.
 
-### Overview
-
-<div className="my-4">
-  <iframe
-    src="https://codesandbox.io/embed/jzrywn?view=Editor+%2B+Preview&module=%2Fcontact.html&initialpath=contact.html"
-    width="100%"
-    height="500px"
-    title="html-blog-project"
-    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-  />
-</div>
-
-<Steps>
-
-### Design the Page
-
-### Create the `contact.html` file
-
-### Write the HTML Structure
+## Inline Event Handling
+You can use inline event handling directly in HTML elements to specify JavaScript code that should be executed when a particular event occurs.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Document metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog - My Blog</title>
-  </head>
-  <body>
-    <!-- Your content goes here -->
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling in JavaScript</title>
+</head>
+<body>
+    <button onclick="handleClick()">Click me</button>
+
+    <script>
+        // Inline event handling function
+        function handleClick() {
+            alert('Button Clicked!');
+        }
+    </script>
+</body>
 </html>
 ```
 
-- `<!DOCTYPE html>` declares the document type and version of HTML.
-- `<html lang="en">` sets the language of the document to English.
-- `<head>` contains metadata like character set, viewport settings, and the title of the webpage.
-- `<body>` is where the main content of the webpage goes.
+In this example, the handleClick function is defined in the `<script>` tag and is triggered when the button is clicked.
 
-### Create the Header Section
-
-```html
-<!-- Inside <body> after <body> tag -->
-<!-- Header section containing the main title of the blog -->
-<header>
-  <h1>
-    <span>
-      <img
-        height="50px"
-        width="auto"
-        src="images/profile.jpeg"
-        alt="Surafel's photo"
-      />
-    </span>
-    Surafel's Blog
-  </h1>
-</header>
-```
-
-- `<header>` is a semantic tag for the header section.
-- `<h1>` is a heading tag indicating the main title of the page.
-- An `<img>` tag is used for displaying an image.
-
-### Create the Navigation Bar
-
-```html
-<!-- Inside <body> after <header> -->
-<!-- Navigation section with links to other pages -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Contact</a>
-</nav>
-```
-
-- `<nav`> is a semantic tag for the navigation section.
-- `<a> `is an anchor tag creating clickable links. Update href attributes with your actual page URLs.
-
-### Create the Main Section
-
-```html
-<!-- Inside <body> after <nav> -->
-<!-- Main content section -->
-<section>
-  <!-- Main content section -->
-  <section>
-    <h2>Contact Me</h2>
-
-    <!-- Contact form -->
-    <form action="submit_contact.php" method="post">
-      <!-- Name input -->
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-      </div>
-
-      <!-- Email input -->
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-
-      <!-- Message textarea -->
-      <div>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-      </div>
-
-      <!-- Submit button -->
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-</section>
-```
-
-- `<section>` is a semantic tag for grouping content.
-- `<article>` is used to define independent, self-contained content, like blog posts.
-
-### Create the Links Section
-
-```html
-<!-- After the last article inside <section> -->
-<!-- Links section -->
-<h3>Links</h3>
-<ul>
-  <li>
-    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-  </li>
-  <li>
-    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-  </li>
-  <li>
-    <a href="https://t.me/yourusername" target="_blank">Telegram</a>
-  </li>
-</ul>
-```
-
-- `<h3>` is a heading tag for the links section.
-- `<ul>` is an unordered list container.
-- `<li>`is a list item.
-
-### Create the Footer Section
-
-```html
-<!-- Inside <body> at the end -->
-<!-- Footer section -->
-<footer>
-  <p>&copy; 2024 Your Blog Name. All rights reserved.</p>
-</footer>
-```
-
-- `<footer>` is a semantic tag for the footer section.
-- `<p>` is used for text content in the footer.
-
-### Overview
+## DOM Event Listeners
+A more flexible and recommended approach is to use event listeners to handle events. Event listeners allow you to attach functions to elements, specifying the type of event to listen for.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Document metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog - My Blog</title>
-  </head>
-  <body>
-    <!-- Header section -->
-    <header>
-      <h1>
-        <span>
-          <img
-            height="50px"
-            width="auto"
-            src="images/profile.jpeg"
-            alt="Surafel's photo"
-        /></span>
-        Surafel's Blog
-      </h1>
-    </header>
-    <hr />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling in JavaScript</title>
+</head>
+<body>
+    <button id="myButton">Click me</button>
 
-    <!-- Navigation menu -->
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <hr />
-
-    <!-- Main content section -->
-    <section>
-      <h2>Contact Me</h2>
-
-      <!-- Contact form -->
-      <form action="submit_contact.php" method="post">
-        <!-- Name input -->
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-
-        <!-- Email input -->
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <!-- Message textarea -->
-        <div>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-
-        <!-- Submit button -->
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-    <!-- Links section -->
-    <h3>Links</h3>
-    <ul>
-      <li>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      </li>
-      <li>
-        <a href="https://linkedin.com/in/yourusername" target="_blank"
-          >LinkedIn</a
-        >
-      </li>
-      <li><a href="https://t.me/yourusername" target="_blank">Telegram</a></li>
-    </ul>
-    <footer>
-      <p>&copy; 2024 Mind Learning Ethiopia. All rights reserved.</p>
-    </footer>
-  </body>
+    <script>
+        // Event listener for button click
+        document.getElementById('myButton').addEventListener('click', function() {
+            alert('Button Clicked!');
+        });
+    </script>
+</body>
 </html>
 ```
 
-</Steps>
+In this example, the addEventListener method is used to attach an anonymous function to the button's click event. The function displays an alert when the button is clicked.
+
+## Common Events
+Here are some common events you can handle in JavaScript:
+
+- `click`: Occurs when a mouse click is detected.
+- `mouseover` and `mouseout`: Triggered when the mouse pointer enters or leaves an element.
+- `keydown`, `keyup`, and `keypress`: Handle keyboard events.
+- `load`: Fired when a page or an element finishes loading.
+- `submit`: Triggered when a form is submitted.
+
+## Event Object
+Event handlers receive an event object as a parameter, providing information about the event, such as the target element and additional details.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling in JavaScript</title>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+
+    <script>
+        // Event listener with event object
+        document.getElementById('myButton').addEventListener('click', function(event) {
+            alert('Button Clicked! Target: ' + event.target.tagName);
+        });
+    </script>
+</body>
+</html>
+```
+
+In this example, the event object is used to display the tag name of the target element when the button is clicked.
+
+Understanding event handling is crucial for creating interactive web pages. As you explore more complex scenarios, you'll discover additional event-related concepts and techniques. Happy coding!
+
+
+
+
+

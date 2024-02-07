@@ -1,31 +1,37 @@
 {
   "--- hey": {
-    "title": "Basics of JavaScript",
+    "title": "Introoduction to Server-Side JavaScript",
     "type": "separator"
   },
-  "introduction": {},
-  "variables": {},
-  "data-types": {},
-  "operators": {},
+  "evolution": {},
+  "overview": {},
+  "key-concepts": {},
   "--- my_new_separator": {
-    "title": "Working with HTML",
+    "title": "Building with Node.js",
     "type": "separator"
   },
-  "scripting-within": {},
+  "setting-up": {},
+  "node-package-manager": {},
+  "creating-a-server": {},
+  "node-js-ecosystem": {
+    "title": "Exploring the Node.js Ecosystem"
+  },
   "--- another_separator": {
-    "title": "Document Object Model (DOM)",
+    "title": "Express.js Framework",
     "type": "separator"
   },
-  "dom-introduction": {},
-  "accessing-html": {},
-  "manipulating-html": {},
-  "event-handling": {},
-  "--- practical-session-one-separator": {
-    "title": "Practical Session",
+  "introduction-to-express-js": {},
+  "routing-and-middleware": {},
+  "handling-http": {},
+  "building-restful-api": {
+    "title": "Building RESTful APIs"
+  },
+  "--- database-interaction-one-separator": {
+    "title": "Database Interaction with Node.js",
     "type": "separator"
   },
-  "blogging-platform": {},
-  "form-submission": {},
-  "images-gallery": {},
-  "page-animations": {}
+  "connecting-to-databases": {},
+  "executing-queries-transactions": {},
+  "integrating-mongo-db-node-js": {},
+  "best-practices": {}
 }

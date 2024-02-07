@@ -1,0 +1,45 @@
+# Lifecycle Methods
+
+React components go through a lifecycle that encompasses different phases, providing developers with various opportunities to perform actions and handle events. Here, we'll explore the key lifecycle methods and their significance in building React applications.
+
+Mounting Lifecycle
+1. constructor() Method:
+Initializes the component.
+Invoked before it is mounted.
+Used for setting initial state and binding methods.
+2. static getDerivedStateFromProps(nextProps, nextState) Method:
+Invoked right before rendering when new props or state are received.
+Returns an object to update state or null if no state update is needed.
+3. render() Method:
+Responsible for rendering the component.
+Pure function that should not modify state or interact with the DOM directly.
+4. componentDidMount() Method:
+Invoked after the component is inserted into the DOM.
+Ideal for performing initial setup, fetching data, or interacting with the DOM.
+Updating Lifecycle
+5. shouldComponentUpdate(nextProps, nextState) Method:
+Invoked before rendering when new props or state are received.
+Determines if the component should re-render.
+Helps optimize performance by preventing unnecessary renders.
+6. render() Method:
+Same as in the Mounting phase.
+7. componentDidUpdate(prevProps, prevState) Method:
+Invoked after the component has been updated.
+Ideal for performing side effects based on changes in props or state.
+Unmounting Lifecycle
+8. componentWillUnmount() Method:
+Invoked just before the component is unmounted and destroyed.
+Used for cleanup tasks, such as clearing timers or canceling network requests.
+Error Handling Lifecycle
+9. static getDerivedStateFromError(error) Method:
+Invoked when there is an error during rendering, in a lifecycle method, or in the constructor.
+Returns an object to update state or null if no state update is needed.
+10. componentDidCatch(error, info) Method:
+Invoked after an error has been thrown by a descendant component.
+Used to log error information or perform fallback UI rendering.
+Understanding these lifecycle methods is crucial for effective React development. They provide control over different stages of a component's existence, allowing developers to manage state, perform side effects, and handle errors appropriately.
+
+
+
+
+

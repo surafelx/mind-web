@@ -1,0 +1,34 @@
+RESTful API development is guided by a set of key principles that contribute to its simplicity, scalability, and flexibility. These principles, outlined by Roy Fielding in his dissertation, form the foundation of the REST architectural style. Here are the key principles of RESTful API development:
+
+1. Stateless Communication:
+Principle: Each request from a client to a server must contain all the information needed to understand and process the request.
+Implication: The server does not store any information about the client's state between requests. Every request is independent and self-contained.
+2. Resources:
+Principle: Everything in a RESTful system is a resource, and each resource is identified by a unique URI.
+Implication: Resources can represent entities, services, or data objects. URIs act as universal identifiers for these resources.
+3. Uniform Interface:
+Principle: A uniform and consistent interface simplifies the architecture and makes it easy to understand and use.
+Constraints:
+Resource Identification: Resources are identified in requests.
+Resource Manipulation through Representations: Resources are manipulated through representations, such as JSON or XML.
+Self-Descriptive Messages: Each message from the server to the client contains enough information to describe how to process the message.
+Hypermedia as the Engine of Application State (HATEOAS): Clients interact with the application entirely through hypermedia provided dynamically by application servers.
+4. HTTP Methods (Verbs):
+Principle: RESTful APIs use standard HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources.
+Implication: Each method corresponds to a specific CRUD operation (Create, Read, Update, Delete) and is used to express the intention of the operation.
+5. Representation:
+Principle: Resources can have multiple representations (e.g., JSON, XML), and clients interact with these representations rather than directly with resources.
+Implication: The choice of representation allows for flexibility and supports different client needs and capabilities.
+6. Statelessness:
+Principle: Each request from a client contains all the information needed for the server to fulfill that request.
+Implication: The server does not store any client state between requests. Statelessness simplifies server design and scalability.
+7. Cacheability:
+Principle: Responses from the server can be explicitly marked as cacheable or non-cacheable.
+Implication: Cacheable responses improve performance by allowing clients or intermediary servers to reuse previously fetched representations.
+8. Layered System:
+Principle: A client interacts with the immediate server, while the server may interact with other servers or services to fulfill a request.
+Implication: This principle supports a modular and scalable architecture by allowing for the introduction of intermediary servers, load balancers, and other components.
+9. Code on Demand (Optional):
+Principle: The capability for a server to temporarily extend the functionality of a client by transferring executable code.
+Implication: While not commonly used in modern RESTful APIs, this option allows for dynamic behavior in clients.
+Understanding and adhering to these principles is essential for designing RESTful APIs that are intuitive, scalable, and interoperable. They provide a framework for creating systems that can evolve gracefully over time and accommodate a variety of clients and use cases.

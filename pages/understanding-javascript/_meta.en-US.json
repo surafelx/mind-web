@@ -7,6 +7,7 @@
   "variables": {},
   "data-types": {},
   "operators": {},
+  "functions": {},
   "--- my_new_separator": {
     "title": "Working with HTML",
     "type": "separator"
@@ -16,7 +17,9 @@
     "title": "Document Object Model (DOM)",
     "type": "separator"
   },
-  "dom-introduction": {},
+  "dom-introduction": {
+    "title": "DOM Introduction"
+  },
   "accessing-html": {},
   "manipulating-html": {},
   "event-handling": {},
@@ -26,6 +29,7 @@
   },
   "blogging-platform": {},
   "form-submission": {},
-  "images-gallery": {},
-  "page-animations": {}
+  "blog-carousel": {},
+  "page-animations": {},
+  "hamburger-menu": {}
 }

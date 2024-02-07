@@ -1,0 +1,110 @@
+# Building RESTful API
+
+Building RESTful APIs with Server-Side JavaScript
+Server-Side JavaScript (SSJS) has become a powerful tool for developing scalable and efficient web applications. One of the key applications of SSJS is in building RESTful APIs, which provide a standardized way to communicate and exchange data between different software systems. In this article, we'll walk through the process of building a RESTful API using Server-Side JavaScript, focusing on the popular framework Express.js.
+
+Prerequisites
+Before we start building our RESTful API, make sure you have Node.js and npm (Node Package Manager) installed on your machine. You can download them from the official Node.js website.
+
+Step 1: Initializing a Node.js Project
+Open your terminal and navigate to the desired directory for your project. Run the following commands:
+
+bash
+Copy code
+mkdir my-restful-api
+cd my-restful-api
+npm init -y
+This will create a new Node.js project with a package.json file.
+
+Step 2: Installing Express.js
+Next, let's install Express.js. Run the following command:
+
+bash
+Copy code
+npm install express
+This will add Express.js as a dependency to your project.
+
+Step 3: Creating the Express App
+Now, create a file named app.js in your project directory. This file will serve as the entry point for your application.
+
+javascript
+Copy code
+// app.js
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.send('Welcome to my RESTful API!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+In this example, we've created a simple Express app with a single route that responds with a welcome message when you access the root URL.
+
+Step 4: Adding RESTful Endpoints
+Let's enhance our API by adding CRUD (Create, Read, Update, Delete) functionality for a resource. We'll use a hypothetical resource, "tasks," as an example.
+
+javascript
+Copy code
+// app.js
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+
+let tasks = [
+  { id: 1, title: 'Task 1', completed: false },
+  { id: 2, title: 'Task 2', completed: true },
+];
+
+// Get all tasks
+app.get('/tasks', (req, res) => {
+  res.json(tasks);
+});
+
+// Get a specific task by ID
+app.get('/tasks/:id', (req, res) => {
+  const taskId = parseInt(req.params.id);
+  const task = tasks.find((t) => t.id === taskId);
+
+  if (task) {
+    res.json(task);
+  } else {
+    res.status(404).json({ error: 'Task not found' });
+  }
+});
+
+// Create a new task
+app.post('/tasks', (req, res) => {
+  const newTask = req.body;
+  tasks.push(newTask);
+  res.status(201).json(newTask);
+});
+
+// Update a task by ID
+app.put('/tasks/:id', (req, res) => {
+  const taskId = parseInt(req.params.id);
+  const updatedTask = req.body;
+  tasks = tasks.map((t) => (t.id === taskId ? { ...t, ...updatedTask } : t));
+  res.json(updatedTask);
+});
+
+// Delete a task by ID
+app.delete('/tasks/:id', (req, res) => {
+  const taskId = parseInt(req.params.id);
+  tasks = tasks.filter((t) => t.id !== taskId);
+  res.json({ message: 'Task deleted successfully' });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+Now, your API has endpoints to perform CRUD operations on tasks. You can test these endpoints using tools like Postman or by making HTTP requests from your frontend application.
+
+Conclusion
+Building RESTful APIs with Server-Side JavaScript, especially using Express.js, provides a straightforward and efficient way to create scalable and interoperable web services. As you delve deeper into SSJS development, consider exploring additional features such as middleware, authentication, and database integration to enhance the functionality and security of your RESTful APIs.

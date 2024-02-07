@@ -1,0 +1,108 @@
+Let's walk through examples of normalization and data integrity concepts using popular Relational Database Management Systems (RDBMS) like MySQL and PostgreSQL.
+
+Example with MySQL:
+Creating Tables:
+Consider a denormalized table for storing information about students and their courses:
+
+sql
+Copy code
+-- Students table (Denormalized)
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(255),
+    course_id INT,
+    course_name VARCHAR(255),
+    instructor_name VARCHAR(255)
+);
+Normalized Tables:
+
+sql
+Copy code
+-- Students table (Normalized)
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(255)
+);
+
+-- Courses table
+CREATE TABLE courses (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(255),
+    instructor_name VARCHAR(255)
+);
+Enforcing Referential Integrity:
+sql
+Copy code
+-- Adding foreign key constraint
+ALTER TABLE students
+ADD CONSTRAINT fk_course
+FOREIGN KEY (course_id) REFERENCES courses(course_id);
+Example with PostgreSQL:
+Creating Tables:
+Consider a denormalized table for storing information about employees and their departments:
+
+sql
+Copy code
+-- Employees table (Denormalized)
+CREATE TABLE employees (
+    employee_id SERIAL PRIMARY KEY,
+    employee_name VARCHAR(255),
+    department_id INT,
+    department_name VARCHAR(255),
+    manager_name VARCHAR(255)
+);
+Normalized Tables:
+
+sql
+Copy code
+-- Employees table (Normalized)
+CREATE TABLE employees (
+    employee_id SERIAL PRIMARY KEY,
+    employee_name VARCHAR(255),
+    department_id INT
+);
+
+-- Departments table
+CREATE TABLE departments (
+    department_id INT PRIMARY KEY,
+    department_name VARCHAR(255),
+    manager_name VARCHAR(255)
+);
+Enforcing Referential Integrity:
+sql
+Copy code
+-- Adding foreign key constraint
+ALTER TABLE employees
+ADD CONSTRAINT fk_department
+FOREIGN KEY (department_id) REFERENCES departments(department_id);
+Query Examples:
+Querying Denormalized Table (MySQL):
+sql
+Copy code
+-- Select all students and their courses from denormalized table
+SELECT * FROM students;
+Querying Normalized Tables (MySQL):
+sql
+Copy code
+-- Select all students and their courses from normalized tables
+SELECT students.student_id, students.student_name, courses.course_name, courses.instructor_name
+FROM students
+JOIN courses ON students.course_id = courses.course_id;
+Querying Denormalized Table (PostgreSQL):
+sql
+Copy code
+-- Select all employees and their departments from denormalized table
+SELECT * FROM employees;
+Querying Normalized Tables (PostgreSQL):
+sql
+Copy code
+-- Select all employees and their departments from normalized tables
+SELECT employees.employee_id, employees.employee_name, departments.department_name, departments.manager_name
+FROM employees
+JOIN departments ON employees.department_id = departments.department_id;
+These examples demonstrate the process of normalizing tables, enforcing referential integrity, and querying data from both denormalized and normalized structures using popular RDBMS like MySQL and PostgreSQL. Normalization and data integrity practices help maintain a structured and efficient database design, ensuring consistency and reliability in data management.
+
+
+
+
+

@@ -1,31 +1,35 @@
 {
   "--- hey": {
-    "title": "Basics of JavaScript",
+    "title": "Introduction",
     "type": "separator"
   },
   "introduction": {},
-  "variables": {},
-  "data-types": {},
-  "operators": {},
+  "role-of-databases": {},
+  "types-of-databases": {},
+  "relational-and-non-relational": {},
+  "choosing-the-right-databases": {},
   "--- my_new_separator": {
-    "title": "Working with HTML",
+    "title": "Relatioal Databases and SQL",
     "type": "separator"
   },
-  "scripting-within": {},
+  "introduction-to-rdbms": {},
+  "sql-basics": {},
+  "normalization-and-data-integrity": {},
+  "examples-with-popular-rdbms": {},
   "--- another_separator": {
-    "title": "Document Object Model (DOM)",
+    "title": "NoSQL MongoDB",
     "type": "separator"
   },
-  "dom-introduction": {},
-  "accessing-html": {},
-  "manipulating-html": {},
-  "event-handling": {},
-  "--- practical-session-one-separator": {
-    "title": "Practical Session",
+  "understanding-nosql": {},
+  "document-oriented-database": {},
+  "json-format-document-structure": {},
+  "crud-operations": {},
+  "--- data-modeling-separator": {
+    "title": "Data Modeling and Design",
     "type": "separator"
   },
-  "blogging-platform": {},
-  "form-submission": {},
-  "images-gallery": {},
-  "page-animations": {}
+  "importance-of-effective-data-modeling": {},
+  "schema-design": {},
+  "relationships-in-document-oriented": {},
+  "best-practices": {}
 }

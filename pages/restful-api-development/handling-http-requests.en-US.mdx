@@ -1,0 +1,85 @@
+# Handling HTTP Request
+
+Handling different types of HTTP requests (GET, POST, PUT, DELETE) is a fundamental aspect of building robust web applications. In this article, we'll explore how to handle these requests using JavaScript, focusing on server-side implementations.
+
+Handling HTTP Requests with Node.js and Express
+For our examples, we'll use Node.js along with the Express framework, a popular choice for building web applications and APIs.
+
+1. Setting Up the Project
+First, let's set up a simple Node.js project with Express. Ensure you have Node.js installed, and create a new project folder. Run the following commands in your terminal:
+
+bash
+Copy code
+mkdir http-requests-example
+cd http-requests-example
+npm init -y
+npm install express
+Create a file named app.js for your application code.
+
+2. Creating an Express Server
+In app.js, set up a basic Express server:
+
+javascript
+Copy code
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+Run your server with node app.js to ensure everything is working.
+
+3. Handling GET Requests
+Let's create a simple route to handle GET requests:
+
+javascript
+Copy code
+app.get('/api/data', (req, res) => {
+  res.json({ message: 'GET request received!' });
+});
+Now, if you navigate to http://localhost:3000/api/data in your browser, you should see the JSON response.
+
+4. Handling POST Requests
+To handle POST requests, you need to include the body-parser middleware. Install it by running:
+
+bash
+Copy code
+npm install body-parser
+Update your app.js:
+
+javascript
+Copy code
+const bodyParser = require('body-parser');
+app.use(bodyParser.json()); // Parse JSON requests
+
+app.post('/api/data', (req, res) => {
+  const { newData } = req.body;
+  // Process the new data
+  res.json({ message: `POST request received with data: ${newData}` });
+});
+Send a POST request using a tool like Postman or through a form in your application.
+
+5. Handling PUT and DELETE Requests
+Similarly, you can handle PUT and DELETE requests:
+
+javascript
+Copy code
+app.put('/api/data/:id', (req, res) => {
+  const { id } = req.params;
+  const { updatedData } = req.body;
+  // Update data with the specified ID
+  res.json({ message: `PUT request received for ID ${id} with data: ${updatedData}` });
+});
+
+app.delete('/api/data/:id', (req, res) => {
+  const { id } = req.params;
+  // Delete data with the specified ID
+  res.json({ message: `DELETE request received for ID ${id}` });
+});
+These examples showcase the basic setup for handling different HTTP requests using Node.js and Express. Depending on your application's complexity, you might integrate databases, authentication, and additional middleware to enhance functionality.
+
+
+
+
+

@@ -1,31 +1,31 @@
 {
   "--- hey": {
-    "title": "Basics of JavaScript",
+    "title": "React State and Routing",
     "type": "separator"
   },
-  "introduction": {},
-  "variables": {},
-  "data-types": {},
-  "operators": {},
+  "recap": {},
+  "advanced-state": {},
+  "immutability": {},
   "--- my_new_separator": {
-    "title": "Working with HTML",
+    "title": "React Context API",
     "type": "separator"
   },
-  "scripting-within": {},
+  "context-api": {},
+  "global-state": {},
+  "use-cases": {},
   "--- another_separator": {
-    "title": "Document Object Model (DOM)",
+    "title": "React Router",
     "type": "separator"
   },
-  "dom-introduction": {},
-  "accessing-html": {},
-  "manipulating-html": {},
-  "event-handling": {},
-  "--- practical-session-one-separator": {
-    "title": "Practical Session",
+  "overview": {},
+  "configuring-routes": {},
+  "navigating-views": {},
+  "programmatic-navigation": {},
+  "--- advanced_router_separator": {
+    "title": "Advanced Router",
     "type": "separator"
   },
-  "blogging-platform": {},
-  "form-submission": {},
-  "images-gallery": {},
-  "page-animations": {}
+  "nested-routes-and-layouts": {},
+  "redirects-and-conditional-navigation": {},
+  "implementing-route-guards": {}
 }

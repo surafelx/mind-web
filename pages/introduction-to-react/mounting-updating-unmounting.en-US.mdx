@@ -1,0 +1,74 @@
+# Mounting, Unmounting, Updating
+In React, components go through a lifecycle that consists of different phases. Understanding these phases helps you manage your component's behavior and interactions effectively. The lifecycle methods can be categorized into three main phases: Mounting, Updating, and Unmounting.
+
+Mounting
+1. constructor() Method:
+The constructor is called when a component is being initialized.
+It is used for setting up initial state and binding event handlers.
+jsx
+Copy code
+constructor(props) {
+  super(props);
+  this.state = { count: 0 };
+}
+2. static getDerivedStateFromProps(props, state) Method:
+Invoked before rendering when new props or state are being received.
+Used for updating state based on changes in props.
+jsx
+Copy code
+static getDerivedStateFromProps(nextProps, prevState) {
+  if (nextProps.value !== prevState.value) {
+    return { value: nextProps.value };
+  }
+  return null;
+}
+3. render() Method:
+The render method is responsible for returning React elements to be displayed.
+It should be a pure function without side effects.
+jsx
+Copy code
+render() {
+  return <div>{this.state.count}</div>;
+}
+4. componentDidMount() Method:
+Invoked after the component is rendered to the DOM.
+Used for side effects like fetching data or interacting with the DOM.
+jsx
+Copy code
+componentDidMount() {
+  console.log("Component has mounted!");
+}
+Updating
+5. shouldComponentUpdate(nextProps, nextState) Method:
+Invoked before rendering when new props or state are being received.
+Used to optimize performance by preventing unnecessary renders.
+jsx
+Copy code
+shouldComponentUpdate(nextProps, nextState) {
+  return this.state.count !== nextState.count;
+}
+6. render() Method:
+Same as in the Mounting phase.
+7. componentDidUpdate(prevProps, prevState) Method:
+Invoked after the component has been updated.
+Used for performing side effects after a component update.
+jsx
+Copy code
+componentDidUpdate(prevProps, prevState) {
+  console.log("Component has been updated!");
+}
+Unmounting
+8. componentWillUnmount() Method:
+Invoked immediately before a component is unmounted and destroyed.
+Used for cleanup tasks like clearing timers or canceling network requests.
+jsx
+Copy code
+componentWillUnmount() {
+  console.log("Component is about to unmount!");
+}
+These lifecycle methods provide hooks into different stages of a component's existence. By leveraging these methods, you can control the behavior of your components and manage resources effectively throughout their lifecycle.
+
+
+
+
+

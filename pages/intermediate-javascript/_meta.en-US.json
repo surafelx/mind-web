@@ -1,31 +1,36 @@
 {
   "--- hey": {
-    "title": "Basics of JavaScript",
+    "title": "Intermediate JavaScript Fundamentals",
     "type": "separator"
   },
-  "introduction": {},
-  "variables": {},
-  "data-types": {},
-  "operators": {},
+  "function-types": {},
+  "closures": {},
+  "manipulating-arrays": {},
+  "object-oriented-programming": {},
   "--- my_new_separator": {
-    "title": "Working with HTML",
+    "title": "Asynchronous JavaScript",
     "type": "separator"
   },
-  "scripting-within": {},
+  "asynchronous-programming": {},
+  "async-await": {},
+  "event-loop": {},
   "--- another_separator": {
-    "title": "Document Object Model (DOM)",
+    "title": "Advanced JavaScript Features",
     "type": "separator"
   },
-  "dom-introduction": {},
-  "accessing-html": {},
-  "manipulating-html": {},
-  "event-handling": {},
+  "es6-features": {
+    "title": "ES6 Features"
+  },
+  "ajax-fetch": {},
+  "client-side-storage": {},
   "--- practical-session-one-separator": {
-    "title": "Practical Session",
+    "title": "Building Robust",
     "type": "separator"
   },
-  "blogging-platform": {},
-  "form-submission": {},
-  "images-gallery": {},
-  "page-animations": {}
+  "error-handling": {},
+  "testing-debugging": {},
+  "dom-manipulation": {},
+  "single-page-application-spa": {
+    "title":  "Single Page Application (SPAs)"
+  }
 }
