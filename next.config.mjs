@@ -98,6 +98,16 @@ export default withNextra({
       statusCode: 302
     },
     {
+      source: '/intermediate-javascript',
+      destination: '/intermediate-javascript/function-types',
+      statusCode: 302
+    },
+    {
+      source: '/intermediate-javascript.([a-zA-Z-]+)',
+      destination: '/intermediate-javascript/function-types',
+      statusCode: 302
+    },
+    {
       source: '/examples',
       destination: '/examples/basic',
       statusCode: 302
