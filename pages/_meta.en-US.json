@@ -32,7 +32,7 @@
     "items": {
       "intermediate-javascript": {
         "title": "Intermediate JavaScript",
-        "href":"/intermediate-javascript/introduction"
+        "href":"/intermediate-javascript/function-types"
       },
       "introduction-to-react": {
         "title": "Introduction to React",
@@ -86,7 +86,7 @@
     "display": "hidden"
   },
   "understanding-javascript": {
-    "title": "Understanding CSS",
+    "title": "Understanding JavaScript",
     "type": "page",
     "display": "hidden"
   },
@@ -115,7 +115,7 @@
     "type": "page",
     "display": "hidden"
   },
-  "restful-api-deployment": {
+  "restful-api-development": {
     "title": "RESTful API Development",
     "type": "page",
     "display": "hidden"
