@@ -1,119 +1,158 @@
-# Form Submission in HTML using JavaScript
+import { Steps } from "nextra/components";
 
-In this article, we'll walk through the process of implementing form submission using JavaScript for the provided HTML code. The HTML structure represents a contact form on a blog site. Let's enhance the form with JavaScript to handle the submission asynchronously, providing a more seamless user experience.
-
-## Understanding the HTML Structure
-
-Before diving into the JavaScript implementation, let's understand the structure of the HTML document:
-
-- The `<form> `element contains input fields for the user's name, email, and a message textarea.
-- Each input field is wrapped in a `<div>` for better styling and organization.
-- The form has an action attribute pointing to a hypothetical `PHP` file (`submit_contact.php`) for server-side processing.
-- There's a submit button for users to trigger the form submission.
-
-## Enhancing the Form with JavaScript
-
-To make the form submission more interactive and dynamic, we'll use JavaScript to prevent the default form submission behavior, handle the submission asynchronously, and provide feedback to the user.
-
-Let's add a `<script>` block to the HTML to implement this functionality:
+# Form Submission
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Document metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact - My Blog</title>
+    <title>Contact | Surafe's Blog</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <!-- ... (previous HTML code) -->
+    <!-- Header section -->
+    <header>
+      <div class="hamburger-container">
+        <div class="hamburger-menu" onclick="toggleMenu()">
+          <div class="bar"></div>
+        </div>
+      </div>
+      <img
+        height="50px"
+        width="auto"
+        src="images/profile.jpeg"
+        alt="Surafel's photo"
+      />
+      <h1>Surafel's Blog</h1>
+    </header>
 
-    <!-- Main content section -->
+    <!-- Navigation menu -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="page-container">
+      <!-- Page content goes here -->
+      <!-- Main content section -->
+      <section>
+        <h2>Contact Me</h2>
+
+        <!-- Contact form -->
+        <form action="submit_contact.php" method="post">
+          <!-- Name input -->
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <!-- Email input -->
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <!-- Message textarea -->
+          <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Links section -->
     <section>
-      <h2>Contact Me</h2>
-
-      <!-- Contact form -->
-      <form id="contactForm" action="submit_contact.php" method="post">
-        <!-- Name input -->
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-
-        <!-- Email input -->
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <!-- Message textarea -->
-        <div>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-
-        <!-- Submit button -->
-        <button type="button" onclick="submitForm()">Submit</button>
-      </form>
+      <ul>
+        <li>
+          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        </li>
+        <li>.</li>
+        <li>
+          <a href="https://linkedin.com/in/yourusername" target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li>.</li>
+        <li>
+          <a href="https://t.me/yourusername" target="_blank">Telegram</a>
+        </li>
+      </ul>
     </section>
-
-    <!-- ... (remaining HTML code) -->
-
+    <footer>
+      <p>&copy; 2024 Mind Learning Ethiopia. All rights reserved.</p>
+    </footer>
     <!-- JavaScript for form submission -->
     <script>
-      function submitForm() {
-        // Collect form data
-        const formData = {
-          name: document.getElementById("name").value,
-          email: document.getElementById("email").value,
-          message: document.getElementById("message").value,
-        };
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to handle form submission
+        function submitForm(event) {
+          event.preventDefault(); // Prevents the default form submission behavior
 
-        // Perform asynchronous form submission
-        fetch("submit_contact.php", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            // Handle the response, e.g., display a success message
-            alert("Form submitted successfully!\n" + data.message);
-          })
-          .catch((error) => {
-            // Handle errors, e.g., display an error message
-            console.error("Error:", error);
-            alert("An error occurred. Please try again.");
-          });
-      }
+          // Fetching form values
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+
+          // Displaying form values in the console
+          console.log("Name: " + name);
+          console.log("Email: " + email);
+          console.log("Message: " + message);
+
+          // You can add additional logic here, such as sending the data to the server using AJAX
+        }
+
+        // Adding a submit event listener to the form
+        var contactForm = document.querySelector("form");
+        if (contactForm) {
+          contactForm.addEventListener("submit", submitForm);
+        }
+      });
     </script>
+    <script src="transition.js"></script>
+    <script src="hamburger.js"></script>
   </body>
 </html>
 ```
 
-## Explanation of the JavaScript Implementation
+## JavaScript for Form Submission
 
-### Collecting Form Data
+The JavaScript code enhances the contact form's functionality by making it asynchronous. Let's understand the key aspects:
 
-- The `submitForm` function is triggered when the user clicks the submit button.
-- It retrieves the values of the name, email, and message fields from the form.
+### Event Listener on Form Submission
 
-### Asynchronous Form Submission
+- The `DOMContentLoaded` event ensures that the script executes only when the HTML content has fully loaded.
+- The `submitForm` function is invoked when the form is submitted.
 
-- The `fetch` API is used to send an asynchronous `POST` request to the server (`submit_contact.php`).
-- The request includes the form data in JSON format.
-- The response is processed asynchronously using the then method.
+### Preventing Default Submission
 
-### Handling the Response
+- The `event.preventDefault()` method prevents the default form submission behavior, allowing for custom handling.
 
-- The `then` block handles the response from the server, parsing it as JSON.
-- You can customize this part based on the expected response from your server.
-- For simplicity, an alert is used to display a success message.
+### Fetching Form Values
 
-### Handling Errors
+- The function retrieves values from the name, email, and message fields using `document.getElementById()`.
 
-- The `catch` block handles errors that may occur during the fetch operation.
-- It logs the error to the console and displays a generic error message to the user.
-- By incorporating this JavaScript code, you've added asynchronous form submission to your blog site, providing a smoother user experience. Users will receive feedback without the need for a page reload. Adjust the code according to your server-side processing requirements and desired user feedback.
+### Displaying Form Values
+
+- The collected form values are logged to the `console` using `console.log()`.
+- This step is useful for debugging and understanding the data being submitted.
+
+### Additional Logic (AJAX)
+
+- A comment encourages the addition of extra logic, such as sending data to the server using AJAX. This implies that the code can be extended to perform actions like sending form data without reloading the entire page.
+
+### Event Listener Addition
+
+- An event listener is added to the contact form, ensuring that the submitForm function is executed when the form is submitted.
+
+## Conclusion
+
+The presented HTML and JavaScript create a cohesive and interactive contact page for Surafel's Blog. Users can easily reach out, and the asynchronous form submission enhances the user experience. The code is well-organized, making it a solid foundation for further customization and expansion.

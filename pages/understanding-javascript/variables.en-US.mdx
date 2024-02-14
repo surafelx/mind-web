@@ -1,3 +1,6 @@
+import { Steps } from 'nextra/components';
+
+
 # Variables
 
 Variables play a fundamental role in programming by allowing developers to store and manipulate data. In JavaScript, understanding how to work with variables is crucial for building dynamic and interactive applications. In this article, we'll explore the basics of variables, their declaration, and how to use them effectively.
@@ -6,7 +9,9 @@ Variables play a fundamental role in programming by allowing developers to store
 
 In JavaScript, you can declare variables using the `var`, `let`, or `const` keywords. The choice of keyword depends on the desired variable behavior.
 
-1. **var:**
+<Steps>
+
+### **var**
 
    - `var` was the traditional way to declare variables in JavaScript, but it has some quirks and is mostly replaced by `let` and `const`.
    - Variables declared with `var` are function-scoped, meaning they are only accessible within the function where they are declared.
@@ -16,7 +21,7 @@ In JavaScript, you can declare variables using the `var`, `let`, or `const` keyw
    console.log(message);
    ```
 
-2. **let:**
+### **let**
 
 - `let` is block-scoped, meaning it is accessible only within the block (portion of code surrounded by curly braces) where it is defined.
 - It is the preferred choice for variable declaration in modern JavaScript.
@@ -26,7 +31,7 @@ let count = 10;
 console.log(count);
 ```
 
-3. **const:**
+### **const**
 
 - Variables declared with const are also block-scoped, but they cannot be reassigned once a value is assigned.
 
@@ -36,6 +41,8 @@ console.log(count);
 const pi = 3.14;
 console.log(pi);
 ```
+
+</Steps>
 
 ## Variable Naming Conventions
 
@@ -59,6 +66,7 @@ console.log(age);
 ```
 
 ## Dynamic Typing
+
 JavaScript is a dynamically typed language, which means you don't need to specify a variable's type explicitly. The type of a variable is determined at runtime.
 
 ```js

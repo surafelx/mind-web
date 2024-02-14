@@ -1,9 +1,7 @@
 {
-  "--- hey": {
-    "title": "Hello",
-    "type": "separator"
+  "hello": {
+    "title": "Hello 👋"
   },
-  "hello": {},
   "--- my_new_separator": {
     "title": "Get Started",
     "type": "separator"
@@ -12,7 +10,7 @@
   "mindset": {},
   "setup": {},
   "--- introduction_separator": {
-    "title": "Introduction to Web Development",
+    "title": "Introduction",
     "type": "separator"
   },
   "what-is-web-dev": {
@@ -23,14 +21,15 @@
     "title": "Frontend Vs. Backend",
     "type": "separator"
   },
-  "introduction-to-frontend-and-backend": {},
   "frontend": {},
   "backend": {},
   "--- another_separator": {
-    "title": "Overview HTML, CSS & JavaScript",
+    "title": "HTML, CSS & JavaScript",
     "type": "separator"
   },
-  "introduction-to-html-css-and-javascript": {},
+  "introduction-to-html-css-and-javascript": {
+    "title": "Introduction"
+  },
   "html": {},
   "css": {},
   "javascript": {},

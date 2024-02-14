@@ -107,6 +107,7 @@ export default withNextra({
       destination: '/intermediate-javascript/function-types',
       statusCode: 302
     },
+    
     {
       source: '/examples',
       destination: '/examples/basic',

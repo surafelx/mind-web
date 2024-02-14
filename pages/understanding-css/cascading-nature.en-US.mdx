@@ -1,18 +1,28 @@
+import { Steps } from "nextra/components";
+
 # Cascading Nature
 
 CSS stands for Cascading Style Sheets, and the term "cascading" in CSS refers to the cascade of styles or the order in which styles are applied to HTML elements. The concept of cascading is fundamental to how CSS works and contributes to the flexibility and modularity of the styling process. There are a few key reasons why it's called Cascading Style Sheets:
 
-1. Hierarchy of Style Rules:
-   CSS allows you to define styles in different places, such as in an external stylesheet, within a `<style>` tag in the HTML document, or directly inline with HTML elements. When conflicting styles are defined for the same HTML element, the browser follows a specific hierarchy to determine which style should be applied. This hierarchy is what is referred to as the "cascade."
+<Steps>
 
-2. Inheritance of Styles:
-   Styles can be inherited from parent elements to child elements in the HTML document. This inheritance contributes to the cascade, as child elements may adopt styles from their parent elements. However, styles defined directly on an element can override inherited styles.
+### Hierarchy of Style Rules:
 
-3. Specificity of Selectors:
-   CSS uses selectors to target HTML elements for styling. The specificity of these selectors plays a crucial role in the cascade. More specific selectors take precedence over less specific ones, influencing which styles are applied.
+CSS allows you to define styles in different places, such as in an external stylesheet, within a `<style>` tag in the HTML document, or directly inline with HTML elements. When conflicting styles are defined for the same HTML element, the browser follows a specific hierarchy to determine which style should be applied. This hierarchy is what is referred to as the "cascade."
 
-4. Overriding Styles:
-   The cascade allows for the overriding of styles. If a style is defined for an element at a global level and another style is defined for the same element at a more specific level, the more specific style will take precedence.
+### Inheritance of Styles:
+
+Styles can be inherited from parent elements to child elements in the HTML document. This inheritance contributes to the cascade, as child elements may adopt styles from their parent elements. However, styles defined directly on an element can override inherited styles.
+
+### Specificity of Selectors:
+
+CSS uses selectors to target HTML elements for styling. The specificity of these selectors plays a crucial role in the cascade. More specific selectors take precedence over less specific ones, influencing which styles are applied.
+
+### Overriding Styles:
+
+The cascade allows for the overriding of styles. If a style is defined for an element at a global level and another style is defined for the same element at a more specific level, the more specific style will take precedence.
+
+</Steps>
 
 The cascade provides a systematic way to manage styles and resolve conflicts. It ensures that styles are applied in a predictable manner, and developers can control the presentation of web content effectively. Understanding the cascade is essential for creating maintainable and organized stylesheets in web development.
 
@@ -82,4 +92,3 @@ p {
 ```
 
 This example demonstrates the cascading nature, where an inline style with !important takes precedence over an external stylesheet.
-

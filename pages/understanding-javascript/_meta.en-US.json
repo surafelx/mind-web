@@ -1,6 +1,6 @@
 {
   "--- hey": {
-    "title": "Basics of JavaScript",
+    "title": "Basics",
     "type": "separator"
   },
   "introduction": {},
@@ -18,7 +18,7 @@
     "type": "separator"
   },
   "dom-introduction": {
-    "title": "DOM Introduction"
+    "title": "Introduction"
   },
   "accessing-html": {},
   "manipulating-html": {},

@@ -1,8 +1,12 @@
+import { Steps } from "nextra/components";
+
 # Accessing HTML Elements
 
 In web development, JavaScript provides powerful tools for accessing and manipulating HTML elements, allowing you to create dynamic and interactive web pages. In this article, we'll explore various methods for accessing HTML elements using JavaScript.
 
-## `getElementById`
+<Steps>
+
+### `getElementById`
 
 The `getElementById` method allows you to retrieve an HTML element based on its unique identifier.
 
@@ -33,7 +37,7 @@ The `getElementById` method allows you to retrieve an HTML element based on its 
 
 In this example, we use `getElementById` to access the HTML elements with the IDs 'pageTitle' and 'content'. We then manipulate these elements by changing the inner HTML and the text color.
 
-## getElementsByClassName
+### `getElementsByClassName`
 
 The `getElementsByClassName` method allows you to retrieve HTML elements based on their class names. Note that this method returns a collection of elements.
 
@@ -69,7 +73,7 @@ The `getElementsByClassName` method allows you to retrieve HTML elements based o
 
 Here, we use `getElementsByClassName` to access HTML elements with the class name 'highlight'. We then loop through the collection and apply styles to each element.
 
-## querySelector
+### `querySelector`
 
 The `querySelector` method allows you to select HTML elements using CSS-style selectors.
 
@@ -102,5 +106,7 @@ The `querySelector` method allows you to select HTML elements using CSS-style se
 ```
 
 In this example, `querySelector` is used to select the HTML element with the class `'important'`, and its content is then updated.
+
+</ Steps>
 
 These are just a few examples of how JavaScript can be used to access HTML elements. Understanding these methods opens up possibilities for dynamic content manipulation and interaction on your web pages. As you continue learning, you'll discover more advanced techniques for working with the Document Object Model (DOM) using JavaScript. Happy coding!
