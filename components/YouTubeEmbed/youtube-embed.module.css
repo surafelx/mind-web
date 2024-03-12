@@ -2,7 +2,7 @@
     overflow: hidden;
     border-radius: 10px;
     padding-bottom: 56.25%;
-    padding-top: 30px;
+    /* padding-top: 30px; */
     position: relative;
     height: 0;
 }
